@@ -4,137 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #b4dfe5, #f5f5dc); /* ocean blue to beige */
-      text-align: center;
-      overflow-x: hidden;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-top: 30px;
-      color: #005f73;
-      animation: fadeIn 2s ease-in-out;
-    }
-    .cake-container {
-      margin: 30px auto;
-    }
-    .cake-img {
-      width: 180px;
-      animation: pulse 2s infinite;
-    }
-    .button {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      background-color: #0077b6;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .button:hover {
-      background-color: #023e8a;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #b2dfdb, #e0f2f1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
     .card {
-      display: none;
-      margin: 50px auto;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       max-width: 800px;
-      background: white;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 90%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .cake {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+    .message-box {
       display: flex;
       flex-direction: row;
-      gap: 20px;
-      animation: fadeIn 1s ease-in-out;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
     }
-    .card img {
-      max-width: 300px;
-      border-radius: 10px;
-      object-fit: cover;
+    .photo-section {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
     }
-    .message {
+    .photo-section img {
+      max-width: 100%;
+      max-height: 350px;
+      border-radius: 15px;
+    }
+    .text-section {
+      flex: 1 1 300px;
+      padding: 10px;
       text-align: left;
-      font-size: 1rem;
+    }
+    .text-section h2 {
+      color: #004d40;
+    }
+    .text-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
       color: #333;
     }
     .poetry {
       margin-top: 30px;
+      padding: 20px;
+      background: #e0f7fa;
+      border-left: 5px solid #00796b;
+      border-radius: 10px;
       font-style: italic;
-      color: #555;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @media (max-width: 768px) {
-      .card {
-        flex-direction: column;
-        align-items: center;
-      }
-      .card img {
-        max-width: 90%;
-      }
+      font-size: 1.1rem;
+      color: #004d40;
     }
   </style>
 </head>
 <body>
-  <h1>Happy Birthday ❤️</h1>
-  <div class="cake-container">
-    <img src="https://i.imgur.com/u8ZLr4X.png" alt="Cake" class="cake-img" />
-  </div>
-  <button class="button" onclick="showCard()">For You 🎁</button>
-
-  <div class="card" id="greetingCard">
-    <img src="papa.jpg" alt="Papa" />
-    <div class="message">
-      <p><strong>Happy Birthday, My Dear!</strong><br>
-      My little princess has grown up so much!<br>
-      I hope you’re doing well, and I pray everything is fine at home.<br>
-      I know you must be missing me, but listen—<br>
-      whenever you think of me, just look at your elder brother;<br>
-      he’s just like my reflection.<br>
-      If you ever need anything, just tell him,<br>
-      and he’ll make sure you get it.<br><br>
-      My Little Princess,<br>
-      Never consider yourself alone,<br>
-      you are papa’s strong girl after all.<br>
-      Everything will be alright, just stay strong.<br><br>
-      Enjoy your special day,<br>
-      spread kindness, do some charity,<br>
-      and don’t forget to keep me in your prayers.<br>
-      <em>Alhamdulillah, I am doing well</em>.</p>
-
-      <div class="poetry">
-        <p><strong>Happy Birthday, my little star,</strong><br>
-        Look how grown and graceful you are.<br>
-        Though miles apart, my love will stay,<br>
-        Guiding you softly, come what may.<br><br>
-        When you miss me, just look and see,<br>
-        Your brother’s smile—it’s a part of me.<br>
-        For every wish, for every dream,<br>
-        He’ll bring you joy like a shining beam.<br><br>
-        You’re papa’s strong girl, brave and true,<br>
-        No storm can break the light in you.<br>
-        Celebrate, smile, spread kindness today,<br>
-        And in your prayers, send love my way.</p>
+  <div class="card">
+    <img class="cake" src="https://i.imgur.com/tE6z3xM.png" alt="Birthday Cake" />
+    <h1>Happy Birthday ❤️</h1>
+    <div class="message-box">
+      <div class="photo-section">
+        <img src="papa.jpg" alt="Papa's Photo" />
+      </div>
+      <div class="text-section">
+        <h2>From Papa</h2>
+        <p>
+          Mere pyaare bacche,<br>
+          Main chahta hoon ki tu hamesha khush rahe, himmat se jeevan ke har modh ka samna kare.<br>
+          Tu meri shaan hai. Janamdin ki dher saari shubhkamnayein! ❤️
+        </p>
       </div>
     </div>
+    <div class="poetry">
+      "May your smile shine bright every day,<br>
+      Like sunshine lighting your way.<br>
+      With love and memories ever near,<br>
+      Your father’s blessing is always here."
+    </div>
   </div>
-
-  <script>
-    function showCard() {
-      document.getElementById('greetingCard').style.display = 'flex';
-      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
